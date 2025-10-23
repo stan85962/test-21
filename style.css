@@ -1,0 +1,80 @@
+/* Base */
+*{box-sizing:border-box}
+:root{
+  --primary:#004773;
+  --bg:#f5f7fa;
+  --card:#ffffff;
+  --text:#222;
+  --muted:#5e6b7a;
+  --ok:#10b981;
+  --warn:#f59e0b;
+  --bad:#ef4444;
+}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg)}
+
+.container{max-width:980px;margin:0 auto;padding:16px}
+.site-header{background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.site-header .brand{display:flex;align-items:center}
+.site-header .logo{height:32px;margin-right:.5rem}
+.site-header nav a{color:#fff;margin-left:1rem;text-decoration:none;opacity:.8}
+.site-header nav a.active,.site-header nav a:hover{opacity:1}
+
+.card{background:var(--card);padding:1.5rem;border-radius:8px;margin-bottom:1.5rem;box-shadow:0 1px 2px rgba(0,0,0,0.05)}
+.card h2,.card h3{margin-top:0;margin-bottom:.5rem}
+.card p{margin-top:0;margin-bottom:1rem}
+
+.btn{display:inline-block;padding:.75rem 1.5rem;border-radius:4px;text-decoration:none;font-weight:600;transition:background .2s,color .2s}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:#013959}
+
+/* Checklist */
+.checklist{list-style:none;padding-left:0;margin:0}
+.checklist li{position:relative;padding-left:1.75rem;margin-bottom:.5rem}
+.checklist li:before{content:"✔";position:absolute;left:0;color:var(--ok)}
+
+/* Table */
+table{width:100%;border-collapse:collapse}
+th,td{padding:.75rem 1rem;text-align:left;border-bottom:1px solid #eee}
+th{background:var(--bg);font-weight:600}
+tbody tr:hover{background:#f9fafb}
+
+/* Status badges */
+.status{padding:.25rem .5rem;border-radius:4px;font-weight:600;font-size:.875rem;color:#fff;display:inline-block}
+.status.ok{background:var(--ok)}
+.status.warn{background:var(--warn)}
+.status.bad{background:var(--bad)}
+
+/* Hero */
+.hero{background:var(--primary);color:#fff;text-align:center;padding:3rem 1rem;border-radius:8px;margin-bottom:2rem}
+.hero h2{margin-top:0;margin-bottom:.5rem;font-size:2rem}
+.hero p{margin-top:0;margin-bottom:1.5rem;opacity:.9;max-width:680px;margin-left:auto;margin-right:auto}
+
+/* Footer */
+.site-footer{background:var(--primary);color:#fff;padding:1rem 0;margin-top:2rem}
+.site-footer small{opacity:.8}
+
+/* Dashboard */
+.dashboard-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem}
+.dashboard-header h2{margin:0}
+.dashboard-header .btn{font-size:.875rem;padding:.5rem 1rem}
+
+.score-card{display:flex;flex-wrap:wrap;gap:1.5rem;margin-bottom:2rem}
+.score-card .card{flex:1 1 200px;text-align:center}
+.score-card .score{font-size:2.5rem;font-weight:700;margin-bottom:.25rem}
+.score-card .label{font-size:.875rem;color:var(--muted)}
+
+.performance-table table{border-radius:8px;overflow:hidden}
+.performance-table th{text-transform:uppercase;font-size:.75rem;letter-spacing:.05em;color:var(--muted);background:var(--bg)}
+.performance-table td{font-size:.875rem;color:var(--text)}
+.performance-table .status{margin:0}
+
+.rebate-card{background:#f3f4f6;border:2px dashed #e5e7eb;color:var(--muted);text-align:center;padding:2rem;border-radius:8px}
+.rebate-card h3{margin-top:0;margin-bottom:.5rem}
+.rebate-card p{margin:0;margin-bottom:.75rem}
+
+/* Responsive */
+@media (max-width:600px){
+  .site-header{flex-direction:column;align-items:flex-start}
+  .site-header nav{margin-top:.5rem}
+  .score-card{flex-direction:column}
+}
